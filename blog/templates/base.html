@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Site{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h2>Welcome to My Website</h2>
+    </header>
+
+    <main>
+        {% block content %}
+        <p>This is the default content.</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 by Girish</p>
+    </footer>
+</body>
+</html>

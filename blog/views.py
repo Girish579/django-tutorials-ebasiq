@@ -3,5 +3,12 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 
+
 def home(request):
-    return HttpResponse("Welcome to the Blog App!")
+    context = {
+        'name': 'Girish',
+        'framework': 'Django',
+        'year': 2025
+    }
+    return render(request, 'home.html', context)
+
