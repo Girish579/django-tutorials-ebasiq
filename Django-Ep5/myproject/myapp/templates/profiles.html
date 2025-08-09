@@ -1,0 +1,21 @@
+<!-- profiles.html -->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile List</title>
+</head>
+<body>
+    <h1>Uploaded Profiles</h1>
+
+    {% for profile in profiles %}
+        <div style="margin-bottom: 20px;">
+            <p><strong>{{ profile.name }}</strong></p>
+            <img src="{{ profile.avatar.url }}" alt="{{ profile.name }}" width="150">
+        </div>
+    {% empty %}
+        <p>No profiles found.</p>
+    {% endfor %}
+</body>
+</html> 
